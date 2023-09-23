@@ -37,7 +37,7 @@
             {
                 dgvStudent.DataSource = null;
                 List<Student> std = new List<Student>();
-                std = students.Where(s => s.clName.Contains(toolStripTextBox.Text)).ToList();
+                std = students.Where(s => s.clName.Contains(toolStripTextBox.Text, StringComparison.OrdinalIgnoreCase)).ToList();
                 if (std.Count > 0)
                 {
                     dgvStudent.DataSource = null;
@@ -47,6 +47,11 @@
         }
 
         private void toolStripTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
             
         }

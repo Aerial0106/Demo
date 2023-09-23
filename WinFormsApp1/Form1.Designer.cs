@@ -35,6 +35,7 @@
             thoátToolStripMenuItem = new ToolStripMenuItem();
             toolStrip1 = new ToolStrip();
             toolStripButton1 = new ToolStripButton();
+            toolStripLabel1 = new ToolStripLabel();
             toolStripTextBox1 = new ToolStripTextBox();
             dgvStudent = new DataGridView();
             clSTT = new DataGridViewTextBoxColumn();
@@ -42,7 +43,6 @@
             clName = new DataGridViewTextBoxColumn();
             clFaculty = new DataGridViewTextBoxColumn();
             clAvgScore = new DataGridViewTextBoxColumn();
-            toolStripLabel1 = new ToolStripLabel();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvStudent).BeginInit();
@@ -97,6 +97,12 @@
             toolStripButton1.Text = "Thêm mới";
             toolStripButton1.Click += toolStripButton1_Click;
             // 
+            // toolStripLabel1
+            // 
+            toolStripLabel1.Name = "toolStripLabel1";
+            toolStripLabel1.Size = new Size(106, 22);
+            toolStripLabel1.Text = "Tìm kiếm sinh viên";
+            // 
             // toolStripTextBox1
             // 
             toolStripTextBox1.Name = "toolStripTextBox1";
@@ -149,12 +155,6 @@
             clAvgScore.Name = "clAvgScore";
             clAvgScore.Width = 150;
             // 
-            // toolStripLabel1
-            // 
-            toolStripLabel1.Name = "toolStripLabel1";
-            toolStripLabel1.Size = new Size(106, 22);
-            toolStripLabel1.Text = "Tìm kiếm sinh viên";
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -167,6 +167,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             toolStrip1.ResumeLayout(false);

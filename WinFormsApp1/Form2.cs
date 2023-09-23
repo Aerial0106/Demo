@@ -43,14 +43,19 @@ namespace WinFormsApp1
                 MessageBox.Show("Bị trùng mã số sinh viên", "Thông báo", MessageBoxButtons.OK);
                 return;
             }
-            if (int.Parse(txtAvgScore.Text) > 10 || int.Parse(txtID.Text) < 0)
+            if (double.Parse(txtAvgScore.Text) > 10 || double.Parse(txtID.Text) < 0)
             {
                 MessageBox.Show("Điểm không quá 10 và dưới 0", "Thông báo", MessageBoxButtons.OK);
                 return;
             }
-            students.Add(new Student() {clSTT = students.Count() + 1, clID = txtID.Text, clName = txtName.Text, clFaculty = cmbFaculty.Text, clAvgScore = double.Parse(txtAvgScore.Text) });
+            students.Add(new Student() { clSTT = students.Count() + 1, clID = txtID.Text, clName = txtName.Text, clFaculty = cmbFaculty.Text, clAvgScore = double.Parse(txtAvgScore.Text) });
             dgvStudent.DataSource = null;
             dgvStudent.DataSource = students;
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            cmbFaculty.Text = "Công nghệ thông tin";
         }
     }
 }
